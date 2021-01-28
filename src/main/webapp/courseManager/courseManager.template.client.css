@@ -1,0 +1,20 @@
+.wbdv-sticky-nav-bar {
+    background-color: #0a85ed;
+    padding: 8px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    color: white;
+}
+
+#new-course-title {
+    background-color: #49A9F7;
+}
+
+.container {
+    padding-top: 70px;
+}
+
+#plus-circle {
+    color: #EB240A;
+}
