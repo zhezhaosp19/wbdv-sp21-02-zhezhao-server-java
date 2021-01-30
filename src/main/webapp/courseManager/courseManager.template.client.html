@@ -8,118 +8,259 @@
     <link href="courseManager.template.client.css" rel="stylesheet">
 </head>
 <body>
-    <div class="wbdv-sticky-nav-bar">
-        <div class="row">
+<!--    <div class="wbdv-sticky-nav-bar">-->
+<!--        <div class="row">-->
+<!--            <div class="col-1">-->
+<!--                <i class="fas fa-bars fa-2x"></i>-->
+<!--            </div>-->
+<!--            <div class="col-2">-->
+<!--                <h4>Course Manager</h4>-->
+<!--            </div>-->
+<!--            <div class="col-8">-->
+<!--                <input class="form-control" placeholder="New Course Title" id="new-course-title"/>-->
+<!--            </div>-->
+<!--            <div class="col-1">-->
+<!--                <i class="fas fa-plus-circle fa-2x" id="plus-circle"></i>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <nav class="navbar navbar-dark wbdv-sticky-nav-bar">
+        <div class="container-fluid">
             <div class="col-1">
                 <i class="fas fa-bars fa-2x"></i>
             </div>
             <div class="col-2">
-                <h2>Course Manager</h2>
+                <a class="navbar-brand">Course Manager</a>
             </div>
             <div class="col-8">
-                <input class="form-control" placeholder="New Course Title" id="new-course-title"/>
+                <input class="form-control" type="search" placeholder="New Course Title"
+                       aria-label="Search" id="new-course-title">
             </div>
             <div class="col-1">
                 <i class="fas fa-plus-circle fa-2x" id="plus-circle"></i>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container">
+    <div class="wbdv-whole-area">
 
-        <div class="form-group row">
-            <div class="col-6">Title</div>
-            <div class="col-2">Owned by</div>
-            <div class="col-3">Last Modified by me</div>
-            <div class="col-1"></div>
+        <nav class="navbar navbar-light top-cell">
+            <div class="form-group row top-cell-inside">
+                <div class="col-6 nav-item">Title</div>
+                <div class="col-2 nav-item">Owned by
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="col-2 nav-item">Last Modified by me</div>
+                <div class="col-1">
+                    <i class="fas fa-grip-horizontal"></i>
+                </div>
+                <div class="col-1">
+                    <i class="fas fa-sort-alpha-down"></i>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        CS5610 Web Development
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">6:40PM</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        CS5520 Mobile Application Development
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">6:45PM</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        CS5800 Algorithms
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">6:45PM</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        CS5010 Programming Design Paradigm
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">6:50PM</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        CS5200 Intro to Database
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">7:15PM</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row days-divide-cell">
+                <div class="col-10">Yesterday</div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        WD1 - HTML, CSS, responsive design
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.27, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row days-divide-cell">
+                <div class="col-10">Previous 7 days</div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        WD SYLLABUS SP21
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.25, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        CS 5520 Syllabus
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.24, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                         WEBDEV - CSS
+                    </a>
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.23, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        WD - Bootstrap Navbar
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.23, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        Setingup a Development Environment
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.21, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        WEBDEV - HTML
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.21, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="form-group row cell">
+                <div class="col-6">
+                    <a href="../editor/courseEditor.template.client.html">
+                        <i class="fas fa-file"></i>
+                        WEBDEV - Bootstrap
+                    </a>
+                </div>
+                <div class="col-2">Zhe</div>
+                <div class="col-3">Jan.20, 2021</div>
+                <div class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+<!--            fixed add icon-->
+            <div class="sticky-icon float-right">
+                <i class="fas fa-plus-circle fa-3x"></i>
+            </div>
+
         </div>
-
-        <div class="form-group row">
-            <div class="col-6">
-                <a href="../editor/courseEditor.template.client.html">
-                    <i class="fas fa-file"></i>
-                    CS5610 Web Development
-                </a>
-            </div>
-            <div class="col-2">Zhe</div>
-            <div class="col-3">6:40PM</div>
-            <div class="col-1">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-6">
-                <a href="../editor/courseEditor.template.client.html">
-                    <i class="fas fa-file"></i>
-                    CS5520 Mobile Application Development
-                </a>
-            </div>
-            <div class="col-2">Zhe</div>
-            <div class="col-3">6:45PM</div>
-            <div class="col-1">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-6">
-                <a href="../editor/courseEditor.template.client.html">
-                    <i class="fas fa-file"></i>
-                    CS5800 Algorithms
-                </a>
-            </div>
-            <div class="col-2">Zhe</div>
-            <div class="col-3">6:45PM</div>
-            <div class="col-1">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-6">
-                <a href="../editor/courseEditor.template.client.html">
-                    <i class="fas fa-file"></i>
-                    CS5010 Programming Design Paradigm
-                </a>
-            </div>
-            <div class="col-2">Zhe</div>
-            <div class="col-3">6:50PM</div>
-            <div class="col-1">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-6">
-                <a href="../editor/courseEditor.template.client.html">
-                    <i class="fas fa-file"></i>
-                    CS5200 Intro to Database
-                </a>
-            </div>
-            <div class="col-2">Zhe</div>
-            <div class="col-3">7:15PM</div>
-            <div class="col-1">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <p>Yesterday</p>
-
-        <div class="form-group row">
-            <div class="col-6">
-                <a href="../editor/courseEditor.template.client.html">
-                    <i class="fas fa-file"></i>
-                    CS5200 Intro to Database
-                </a>
-            </div>
-            <div class="col-2">Zhe</div>
-            <div class="col-3">7:15PM</div>
-            <div class="col-1">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-        
     </div>
 </body>
 </html>

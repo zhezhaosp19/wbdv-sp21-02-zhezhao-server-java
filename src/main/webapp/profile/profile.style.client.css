@@ -1,9 +1,9 @@
-#logout {
-    background-color: #f94144;
-    color: white;
-}
-
-#update {
+.wbdv-update {
     background-color: #43aa8b;
     color: white
+}
+
+.wbdv-logout {
+    background-color: #f94144;
+    color: white;
 }

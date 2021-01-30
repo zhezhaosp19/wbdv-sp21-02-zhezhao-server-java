@@ -1,20 +1,71 @@
 .wbdv-sticky-nav-bar {
     background-color: #0a85ed;
-    padding: 8px;
+    padding: 7px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     color: white;
 }
 
+.wbdv-whole-area {
+    background-color: #EDEDED;
+    padding-bottom: 200px;
+}
+
 #new-course-title {
-    background-color: #49A9F7;
+    background-color: #5BB2F8;
+}
+
+::placeholder {
+    color: white;
+}
+
+.top-cell {
+    background-color: #EDEDED;
+    padding-top: 65px;
+    padding-bottom: 12px;
+    font-size: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 1px 1px 0 rgba(0,0,50,0.3);
+}
+
+.top-cell-inside {
+    width: 58%;
+    margin: 2px auto;
+    font-size: 15px;
 }
 
 .container {
-    padding-top: 70px;
+    padding-top: 103px;
+}
+
+.cell {
+    margin: 1px auto;
+    padding: 13px 0;
+    font-size: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,50,0.3);
+    background-color: white;
+}
+
+.days-divide-cell {
+    margin: 1px auto;
+    padding: 15px 0;
+    font-size: 15px;
 }
 
 #plus-circle {
     color: #EB240A;
+}
+
+.sticky-icon {
+    position:fixed;
+    bottom:20px;
+    left:90%;
+    color: #EB240A;
+}
+
+.fa-user-friends {
+    color: #A8A8A8;
 }
