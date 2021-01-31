@@ -5,46 +5,77 @@
     <title>Course Editor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="courseEditor.style.client.css" rel="stylesheet">
 </head>
 <body>
 
 
-    <div class="container">
-        <h1>Course Editor</h1>
+<!--    <div class="container">-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg">
+            <div class="container-fluid">
+                <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+<!--                <div class="col-4">-->
+                    <a class="navbar-brand" href="courseEditor.template.client.html">CS5610 Web Development</a>
+<!--                </div>-->
+                <div class="col-8 collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav nav-pills white">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Build</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Theme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <i class="fas fa-plus plus"></i>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
 
         <div class="row">
-            
-            <div class="col-4">
-                <ul class="list-group">
-                    <li class=""list-group-item>
-                        <i class="fas fa-times"></i>
-                    </li>
-                    <li class="list-group-item">Module 1 - jQuery</li>
-                    <li class="list-group-item">Module 2 - React</li>
-                    <li class="list-group-item">Module 3 - Redux</li>
-                    <li class="list-group-item">Module 4 - Native</li>
-                    <li class="list-group-item">Module 5 - Angular</li>
-                    <li class="list-group-item">Module 6 - Node</li>
-                    <li class="list-group-item">Module 7 - Mongo</li>
+
+            <div class="col-4 bg-dark">
+                <ul class="list-group space_list">
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#" role="tab" >Module 1 - jQuery
+                        <i class="fas fa-times float-right"></i>
+                    </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 2 - React
+                        <i class="fas fa-times float-right"></i>
+                    </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 3 - Redux
+                        <i class="fas fa-times float-right"></i>
+                    </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 4 - Native
+                        <i class="fas fa-times float-right"></i>
+                    </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 5 - Angular
+                        <i class="fas fa-times float-right"></i>
+                    </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 6 - Node
+                        <i class="fas fa-times float-right"></i>
+                    </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 7 - Mongo
+                        <i class="fas fa-times float-right"></i>
+                    </a>
                 </ul>
+                <i class="fas fa-plus plus-in-list"></i>
             </div>
 
             <div class="col-8">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -61,7 +92,6 @@
                 </ul>
             </div>
         </div>
-    </div>
 
 </body>
 </html>

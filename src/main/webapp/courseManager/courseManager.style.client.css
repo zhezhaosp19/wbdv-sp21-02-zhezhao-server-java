@@ -9,15 +9,31 @@
 
 .wbdv-whole-area {
     background-color: #EDEDED;
-    padding-bottom: 200px;
+    min-height: 100vh;
 }
 
 #new-course-title {
     background-color: #5BB2F8;
 }
 
-::placeholder {
+input::-moz-placeholder {
     color: white;
+}
+input:-moz-placeholder {
+    color: white;
+    font-size: 14px !important;
+}
+*::-webkit-input-placeholder {
+    color: white;
+    font-size: 14px !important;
+}
+*:-ms-input-placeholder {
+    color: white;
+    font-size: 14px !important;
+}
+*:-moz-placeholder {
+    color: white;
+    font-size: 14px !important;
 }
 
 .top-cell {
@@ -32,13 +48,15 @@
 }
 
 .top-cell-inside {
-    width: 58%;
+    width: 60%;
     margin: 2px auto;
     font-size: 15px;
 }
 
-.container {
+.cell-box {
     padding-top: 103px;
+    margin: 2px auto;
+    width: 60%;
 }
 
 .cell {
