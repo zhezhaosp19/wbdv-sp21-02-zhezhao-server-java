@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    font-weight: 400;
+    text-decoration: #cdb4db underline wavy;
+    letter-spacing: 15px;
+    font-size: 50px;
+    font-family: fantasy, Futura;
+    color: #ffafcc;
+}
+
+.wbdv-login {
+    background-color: #a2d2ff;
+    color: white;
+    font-size: 20px;
+}
+
+.row {
+    text-align: center;
+}

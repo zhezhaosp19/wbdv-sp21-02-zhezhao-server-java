@@ -1,9 +1,9 @@
 .wbdv-sticky-nav-bar {
-    background-color: #0a85ed;
+    background-color: #e78f8e;
     padding: 7px;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 1000;
     color: white;
 }
 
@@ -13,26 +13,26 @@
 }
 
 #new-course-title {
-    background-color: #5BB2F8;
+    background-color: #f2ccc3;
 }
 
 input::-moz-placeholder {
-    color: white;
+    color: white;!important;
 }
 input:-moz-placeholder {
-    color: white;
+    color: white;!important;
     font-size: 14px !important;
 }
 *::-webkit-input-placeholder {
-    color: white;
+    color: white;!important;
     font-size: 14px !important;
 }
 *:-ms-input-placeholder {
-    color: white;
+    color: white;!important;
     font-size: 14px !important;
 }
 *:-moz-placeholder {
-    color: white;
+    color: white;!important;
     font-size: 14px !important;
 }
 
@@ -74,14 +74,14 @@ input:-moz-placeholder {
 }
 
 #plus-circle {
-    color: #EB240A;
+    color: #cc444b;
 }
 
 .sticky-icon {
     position:fixed;
     bottom:20px;
     left:90%;
-    color: #EB240A;
+    color: #cc444b;
 }
 
 .fa-user-friends {

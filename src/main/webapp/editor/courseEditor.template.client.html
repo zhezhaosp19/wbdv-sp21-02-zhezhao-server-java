@@ -17,7 +17,7 @@
 <!--                <div class="col-4">-->
                     <a class="navbar-brand" href="courseEditor.template.client.html">CS5610 Web Development</a>
 <!--                </div>-->
-                <div class="col-8 collapse navbar-collapse" id="navbarNav">
+                <div class="col-9 collapse navbar-collapse" id="navbarNav">
                     <ul class="nav nav-pills white">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Build</a>
@@ -48,48 +48,108 @@
 
         <div class="row">
 
-            <div class="col-4 bg-dark">
+            <div class="col-3 bg-dark">
                 <ul class="list-group space_list">
-                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#" role="tab" >Module 1 - jQuery
-                        <i class="fas fa-times float-right"></i>
-                    </a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 2 - React
-                        <i class="fas fa-times float-right"></i>
-                    </a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 3 - Redux
-                        <i class="fas fa-times float-right"></i>
-                    </a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 4 - Native
-                        <i class="fas fa-times float-right"></i>
-                    </a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 5 - Angular
-                        <i class="fas fa-times float-right"></i>
-                    </a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 6 - Node
-                        <i class="fas fa-times float-right"></i>
-                    </a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 7 - Mongo
-                        <i class="fas fa-times float-right"></i>
-                    </a>
+                    <li>
+                        <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#" role="tab" >Module 1 - jQuery
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 2 - React
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 3 - Redux
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 4 - Native
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 5 - Angular
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 6 - Node
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action list-group-item-dark" data-bs-toggle="list" href="#" role="tab">Module 7 - Mongo
+                            <i class="fas fa-times float-right"></i>
+                        </a>
+                    <li>
+                    <div>
+                        <i class="fas fa-plus plus-in-list fa-2x"></i>
+                    </div>
                 </ul>
-                <i class="fas fa-plus plus-in-list"></i>
             </div>
 
-            <div class="col-8">
-                <ul class="nav nav-pills">
+            <div class="col-9">
+                <ul class="nav nav-pills nav-cell">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        <a class="nav-link active" aria-current="page" href="#">Topic 1</a>
+                    </li>
+                    <li class="nav-item" id="topic">
+                        <a class="nav-link " href="#">Topic 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link " href="#">Topic 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Topic 4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <i class="nav-link fas fa-plus plus" id="plus-topic"></i>
                     </li>
                 </ul>
+
+                <div class="col-sm-12">
+                    <div class="float-right" id="save-preview">
+                        <button class="btn" id="save">Save</button>
+                        <label style="font-size: 18px"><b>Preview</b></label>
+                        <i class="fas fa-toggle-off fa-2x toggle"></i>
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <div class="col-sm-12 combo">
+                            <p><b style="font-size: 25px">Heading widget</b>
+                                <i class="fas fa-times-square fa-3x cross"></i>
+                                <select class="form-control wbdv-field wbdv-role"
+                                        name="heading" id="heading">
+                                    <option value="Heading" selected>Heading</option>
+                                </select>
+                                <i class="fas fa-arrow-square-up fa-3x arrow"></i>
+                                <i class="fas fa-arrow-square-down fa-3x arrow"></i>
+                            </p>
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text" placeholder="Heading text" class="form-control" id="headingtext" name="headingtext">
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text" placeholder="Heading 1" class="form-control" id="heading1" name="heading1">
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text" placeholder="Widget name" class="form-control" id="widgetname" name="widgetname">
+                        </div>
+                        <br>
+                        <div class="col-sm-12">
+                            <p>Preview</p>
+                            <h1>Heading text</h1>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="float-right" id="circle-icon">
+                        <i class="fas fa-plus-circle fa-3x"></i>
+                    </div>
+                </div>
+
             </div>
         </div>
 
