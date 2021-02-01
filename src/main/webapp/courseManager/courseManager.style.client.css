@@ -16,26 +16,6 @@
     background-color: #f2ccc3;
 }
 
-input::-moz-placeholder {
-    color: white;!important;
-}
-input:-moz-placeholder {
-    color: white;!important;
-    font-size: 14px !important;
-}
-*::-webkit-input-placeholder {
-    color: white;!important;
-    font-size: 14px !important;
-}
-*:-ms-input-placeholder {
-    color: white;!important;
-    font-size: 14px !important;
-}
-*:-moz-placeholder {
-    color: white;!important;
-    font-size: 14px !important;
-}
-
 .top-cell {
     background-color: #EDEDED;
     padding-top: 65px;
@@ -86,4 +66,57 @@ input:-moz-placeholder {
 
 .fa-user-friends {
     color: #A8A8A8;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1225px) {
+    .priority-5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1225px) and (min-width: 1045px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-2{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 1045px) and (min-width: 600px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-3{
+        display:none;
+    }
+    .priority-2{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-3{
+        display:none;
+    }
+    .priority-2{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .priority-3 {
+        display: none;
+    }
+    .priority-2 {
+        display: none;
+    }
+}
+
+.cell-box .col-1 {
+    position: relative;
+    /*right: 50px;*/
 }
