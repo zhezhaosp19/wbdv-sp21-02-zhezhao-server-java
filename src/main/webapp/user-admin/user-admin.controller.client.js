@@ -1,17 +1,24 @@
+var $tableRows
+var $createIcon
+var $updateIcon
+
+var $usernameFld
+var $passwordFld
+var $firstnameFld
+var $lastnameFld
+var $roleFld
+
+// var userAdminService = new userAdminService()
 
 
-// var useradminService = new useradminService()
-
-let $tableRows = jQuery("#table-rows")
-
-let users = [
+var users = [
     {username: "ada", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
 ]
 
 function renderUsers(users) {
     $tableRows.empty()
-    for(let i = 0; i < users.length; i++) {
-        let user = users[i];
+    for(var i = 0; i < users.length; i++) {
+        var user = users[i];
         $tableRows.append(`                
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
                     <td class="wbdv-username">${user.username}</td>
@@ -29,8 +36,8 @@ function renderUsers(users) {
     }
     $(".wbdv-remove-icon").click(function (event) {
         alert("After remove, user information can't be resume.\n Do you want to remove the user?")
-        let icon = $(event.target)
-        let id = icon.attr("id")
+        var icon = $(event.target)
+        var id = icon.attr("id")
         console.log(id)
         users.splice(id, 1)
         renderUsers(users)
@@ -38,19 +45,21 @@ function renderUsers(users) {
 
 }
 
+function main() {
+    $tableRows = jQuery("#table-rows")
+    $createIcon = $(".wbdv-create-icon")
 
-let createIcon = $(".wbdv-create-icon")
-createIcon.click(function () {
-    let newUser = {
-        username: "1",
-        firstname: "1",
-        lastname: "1",
-        role: "1"
-    };
-    users.push(newUser)
+    $createIcon.click(function () {
+        var newUser = {
+            username: "1",
+            firstname: "1",
+            lastname: "1",
+            role: "1"
+        };
+        users.push(newUser)
+        renderUsers(users)
+    })
+
     renderUsers(users)
-})
-// function main() {
-
-//
-// }
+}
+$(main)
