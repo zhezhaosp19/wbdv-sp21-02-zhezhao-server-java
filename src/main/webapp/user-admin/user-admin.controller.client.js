@@ -8,16 +8,42 @@ var $firstnameFld
 var $lastnameFld
 var $roleFld
 
-// var userAdminService = new userAdminService()
+var userAdminService = new AdminUserServiceClient()
 
 
 var users = [
     {username: "ada", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
 ]
 
+function deleteUser(event) {
+    alert("After remove, user information can't be resume.\n Do you want to remove the user?")
+    var icon = $(event.target)
+    var index = icon.attr("id")
+    var id = users[index]._id
+    userAdminService.deleteUser(id).then(function (status) {
+        users.splice(index, 1)
+        renderUsers(users)
+    })
+}
+
+function createUser() {
+    var newUser = {
+        username: $usernameFld.val(),
+        firstname: $firstnameFld.val(),
+        lastname: $lastnameFld.val(),
+        role: $roleFld.val()
+    };
+
+    userAdminService.createUser(newUser)
+        .then(function (actualUser) {
+            users.push(actualUser)
+            renderUsers(users)
+        })
+}
+
 function renderUsers(users) {
     $tableRows.empty()
-    for(var i = 0; i < users.length; i++) {
+    for(let i = 0; i < users.length; i++) {
         var user = users[i];
         $tableRows.append(`                
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
@@ -34,14 +60,7 @@ function renderUsers(users) {
                     </td>
                 </tr>`)
     }
-    $(".wbdv-remove-icon").click(function (event) {
-        alert("After remove, user information can't be resume.\n Do you want to remove the user?")
-        var icon = $(event.target)
-        var id = icon.attr("id")
-        console.log(id)
-        users.splice(id, 1)
-        renderUsers(users)
-    })
+    $(".wbdv-remove-icon").click(deleteUser)
 
 }
 
@@ -49,17 +68,17 @@ function main() {
     $tableRows = jQuery("#table-rows")
     $createIcon = $(".wbdv-create-icon")
 
-    $createIcon.click(function () {
-        var newUser = {
-            username: "1",
-            firstname: "1",
-            lastname: "1",
-            role: "1"
-        };
-        users.push(newUser)
+    $usernameFld = $(".wbdv-username-fld")
+    $firstnameFld = $(".wbdv-firstname-fld")
+    $lastnameFld = $(".wbdv-lastname-fld")
+    $roleFld = $(".wbdv-role-fld")
+
+    $createIcon.click(createUser)
+
+    users = userAdminService.findAllUsers().then(function (actualUsers) {
+        users = actualUsers
         renderUsers(users)
     })
 
-    renderUsers(users)
 }
 $(main)
