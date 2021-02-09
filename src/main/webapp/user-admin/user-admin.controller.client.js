@@ -11,9 +11,9 @@ var $roleFld
 var userAdminService = new AdminUserServiceClient()
 
 
-// var users = [
-//     {username: "ada",password:"", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
-// ]
+var users = [
+    {username: "ada",password:"", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
+]
 
 function deleteUser(event) {
     alert("After remove, user information can't be resume.\n Do you want to remove the user?")
@@ -52,6 +52,22 @@ function selectUser(event) {
     $passwordFld.val(selectedUser.password)
     $firstnameFld.val(selectedUser.firstname)
     $lastnameFld.val(selectedUser.lastname)
+    $roleFld.val(selectedUser.role)
+}
+
+function updateUser() {
+    selectedUser.username = $usernameFld.val()
+    selectedUser.password = $passwordFld.val()
+    selectedUser.firstname = $firstnameFld.val()
+    selectedUser.lastname = $lastnameFld.val()
+    selectedUser.role = $roleFld.val()
+
+    userAdminService.updateUser(selectedUser._id , selectedUser)
+        .then(status => {
+            var index = users.findIndex(user => user._id === selectedUser._id)
+            users[index] = selectedUser
+            renderUsers(users)
+        })
 }
 
 function renderUsers(users) {
@@ -80,7 +96,7 @@ function renderUsers(users) {
 function main() {
     $tableRows = jQuery("#table-rows")
     $createIcon = $(".wbdv-create-icon")
-    $updateIcon = $(".wbdv-update-fld")
+    $updateIcon = $(".wbdv-update-icon")
 
     $usernameFld = $(".wbdv-username-fld")
     $passwordFld = $(".wbdv-password-fld")
@@ -88,6 +104,7 @@ function main() {
     $lastnameFld = $(".wbdv-lastname-fld")
     $roleFld = $(".wbdv-role-fld")
 
+    $updateIcon.click(updateUser)
     $createIcon.click(createUser)
 
     users = userAdminService.findAllUsers().then(function (actualUsers) {
