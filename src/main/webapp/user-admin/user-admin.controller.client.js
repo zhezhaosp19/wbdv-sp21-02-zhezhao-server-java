@@ -12,7 +12,7 @@ var userAdminService = new AdminUserServiceClient()
 
 
 var users = [
-    {username: "ada", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
+    {username: "ada", password: "", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
 ]
 
 function deleteUser(event) {
@@ -29,6 +29,7 @@ function deleteUser(event) {
 function createUser() {
     var newUser = {
         username: $usernameFld.val(),
+        password: $passwordFld.val(),
         firstname: $firstnameFld.val(),
         lastname: $lastnameFld.val(),
         role: $roleFld.val()
@@ -39,6 +40,17 @@ function createUser() {
             users.push(actualUser)
             renderUsers(users)
         })
+}
+
+var selectedUser = null
+function selectUser(event) {
+    var id = $(event.target).attr("id")
+    console.log(id)
+    selectedUser = users.find(user => user._id === id)
+    $usernameFld.val(selectedUser.username)
+    $passwordFld.val(selectedUser.password)
+    $firstnameFld.val(selectedUser.firstname)
+    $lastnameFld.val(selectedUser.lastname)
 }
 
 function renderUsers(users) {
@@ -55,13 +67,13 @@ function renderUsers(users) {
                     <td class="wbdv-actions">
                         <span class="float-right">
                           <i id="${i}" class="fa-2x fa fa-times wbdv-remove-icon"></i>
-                          <i class="fa-2x fa fa-pencil wbdv-edit-icon"></i>
+                          <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-select-icon"></i>
                         </span>
                     </td>
                 </tr>`)
     }
     $(".wbdv-remove-icon").click(deleteUser)
-
+    $(".wbdv-select-icon").click(selectUser)
 }
 
 function main() {
@@ -69,6 +81,7 @@ function main() {
     $createIcon = $(".wbdv-create-icon")
 
     $usernameFld = $(".wbdv-username-fld")
+    $passwordFld = $(".wbdv-password-fld")
     $firstnameFld = $(".wbdv-firstname-fld")
     $lastnameFld = $(".wbdv-lastname-fld")
     $roleFld = $(".wbdv-role-fld")
