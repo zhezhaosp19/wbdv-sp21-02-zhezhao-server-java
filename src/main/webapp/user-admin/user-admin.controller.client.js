@@ -11,9 +11,9 @@ var $roleFld
 var userAdminService = new AdminUserServiceClient()
 
 
-var users = [
-    {username: "ada", password: "", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
-]
+// var users = [
+//     {username: "ada",password:"", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
+// ]
 
 function deleteUser(event) {
     alert("After remove, user information can't be resume.\n Do you want to remove the user?")
@@ -47,6 +47,7 @@ function selectUser(event) {
     var id = $(event.target).attr("id")
     console.log(id)
     selectedUser = users.find(user => user._id === id)
+
     $usernameFld.val(selectedUser.username)
     $passwordFld.val(selectedUser.password)
     $firstnameFld.val(selectedUser.firstname)
@@ -79,6 +80,7 @@ function renderUsers(users) {
 function main() {
     $tableRows = jQuery("#table-rows")
     $createIcon = $(".wbdv-create-icon")
+    $updateIcon = $(".wbdv-update-fld")
 
     $usernameFld = $(".wbdv-username-fld")
     $passwordFld = $(".wbdv-password-fld")
