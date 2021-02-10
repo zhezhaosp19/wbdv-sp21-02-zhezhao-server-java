@@ -10,7 +10,6 @@ var $roleFld
 
 var userAdminService = new AdminUserServiceClient()
 
-
 var users = [
     {username: "ada",password:"", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
 ]
@@ -93,8 +92,7 @@ function renderUsers(users) {
     $(".wbdv-select-icon").click(selectUser)
 }
 
-function clearText()
-{
+function clearText() {
     document.getElementById('usernameFld').value = '';
     document.getElementById('passwordFld').value = '';
     document.getElementById('firstnameFld').value = '';
