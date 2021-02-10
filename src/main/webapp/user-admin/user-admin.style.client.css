@@ -1,1 +1,28 @@
+h1{
+    color: #723c70;
+}
 
+.wbdv-remove-icon {
+    color: #2e6f95;
+}
+
+.wbdv-select-icon {
+    color: #892b64;
+}
+
+.wbdv-update-icon {
+    color: #b7094c;
+}
+
+.wbdv-create-icon {
+    color: #0091ad;
+}
+
+.wbdv-search-icon {
+    color: #5c4d7d;
+}
+
+.btn {
+    border: none; /* Remove borders */
+    cursor: pointer; /* Mouse pointer on hover */
+}

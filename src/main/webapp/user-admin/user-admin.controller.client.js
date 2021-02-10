@@ -62,7 +62,7 @@ function updateUser() {
     selectedUser.lastname = $lastnameFld.val()
     selectedUser.role = $roleFld.val()
 
-    userAdminService.updateUser(selectedUser._id , selectedUser)
+    userAdminService.updateUser(selectedUser._id, selectedUser)
         .then(status => {
             var index = users.findIndex(user => user._id === selectedUser._id)
             users[index] = selectedUser
@@ -78,19 +78,28 @@ function renderUsers(users) {
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
                     <td class="wbdv-username">${user.username}</td>
                     <td>&nbsp;</td>
-                    <td class="wbdv-first-name">${user.firstname}</td>
-                    <td class="wbdv-last-name">${user.lastname}</td>
+                    <td class="wbdv-firstname">${user.firstname}</td>
+                    <td class="wbdv-lastname">${user.lastname}</td>
                     <td class="wbdv-role">${user.role}</td>
                     <td class="wbdv-actions">
                         <span class="float-right">
-                          <i id="${i}" class="fa-2x fa fa-times wbdv-remove-icon"></i>
-                          <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-select-icon"></i>
+                          <i id="${i}" class="fa-2x fa fa-times wbdv-remove-icon btn btn-sm"></i>
+                          <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-select-icon btn btn-sm"></i>
                         </span>
                     </td>
                 </tr>`)
     }
     $(".wbdv-remove-icon").click(deleteUser)
     $(".wbdv-select-icon").click(selectUser)
+}
+
+function clearText()
+{
+    document.getElementById('usernameFld').value = '';
+    document.getElementById('passwordFld').value = '';
+    document.getElementById('firstnameFld').value = '';
+    document.getElementById('lastnameFld').value = '';
+    document.getElementById('roleFld').value = 'FACULTY';
 }
 
 function main() {
@@ -105,7 +114,9 @@ function main() {
     $roleFld = $(".wbdv-role-fld")
 
     $updateIcon.click(updateUser)
+    $updateIcon.click(clearText)
     $createIcon.click(createUser)
+    $createIcon.click(clearText)
 
     users = userAdminService.findAllUsers().then(function (actualUsers) {
         users = actualUsers
