@@ -51,4 +51,12 @@ public class WidgetController {
         return service.updateWidget(id, widget);
     }
 
+    @GetMapping("/api/widgets/{wid}")
+    public Widget findWidgetById(
+            @PathVariable("wid") Long id
+    ) {
+        return service.findWidgetById(id);
+    }
+
+
 }

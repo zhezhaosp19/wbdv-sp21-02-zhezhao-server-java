@@ -68,20 +68,24 @@ public class WidgetService {
     }
 
     public Integer updateWidget(Long id, Widget widget) {
+        if(repository.findById(id).isPresent()) {
+            Widget originalWidget = repository.findById(id).get();
 
-        Widget originalWidget = repository.findById(id).get();
+            originalWidget.setText(widget.getText());
+            originalWidget.setTopicId(widget.getTopicId());
+            originalWidget.setId(widget.getId());
+            originalWidget.setSize(widget.getSize());
+            originalWidget.setType(widget.getType());
+            originalWidget.setSrc(widget.getSrc());
+            originalWidget.setWidth(widget.getWidth());
+            originalWidget.setHeight(widget.getHeight());
 
-        originalWidget.setText(widget.getText());
-        originalWidget.setTopicId(widget.getTopicId());
-        originalWidget.setId(widget.getId());
-        originalWidget.setSize(widget.getSize());
-        originalWidget.setType(widget.getType());
-        originalWidget.setSrc(widget.getSrc());
-        originalWidget.setWidth(widget.getWidth());
-        originalWidget.setHeight(widget.getHeight());
+            repository.save(originalWidget);
+            return 1;
+        }
 
-        repository.save(originalWidget);
-        return 1;
+        return 0;
+
 //        for(int i = 0; i < widgets.size(); i++) {
 //            if(widgets.get(i).getId().equals(id)) {
 //                widgets.set(i, widget);
@@ -89,6 +93,13 @@ public class WidgetService {
 //            }
 //        }
 //        return -1;
+    }
+
+    public Widget findWidgetById(Long id) {
+        if(repository.findById(id).isPresent()) {
+            return repository.findById(id).get();
+        }
+        return null;
     }
 
 }
